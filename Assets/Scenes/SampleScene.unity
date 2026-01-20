@@ -442,6 +442,7 @@ GameObject:
   - component: {fileID: 1673559340}
   - component: {fileID: 1673559341}
   - component: {fileID: 1673559342}
+  - component: {fileID: 1673559343}
   m_Layer: 0
   m_Name: WorldGenerator
   m_TagString: Untagged
@@ -593,6 +594,7 @@ MonoBehaviour:
   autoGenerateNavMesh: 1
   mesh: {fileID: 0}
   vertices: []
+  triangles: 
 --- !u!114 &1673559338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -698,6 +700,7 @@ MonoBehaviour:
   spawnRadius: 80
   maxSlopeAngle: 30
   minDistanceBetweenProps: 2
+  propsPerFrame: 10
 --- !u!114 &1673559341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,6 +736,20 @@ MonoBehaviour:
   - {fileID: 3851015956068934394, guid: dfb23d60f30c46847ba7815aa09e2567, type: 3}
   numberOfAnimals: 5
   spawnRadius: 20
+  animalsPerFrame: 2
+--- !u!114 &1673559343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673559326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1932a825e8807624e9eff7cf0f9388f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LoadingManager
+  minLoadingDuration: 2
 --- !u!1 &1730477875
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,6 +786,9 @@ MonoBehaviour:
   moonIntensity: 0.3
   sunColor: {r: 1, g: 0.95, b: 0.8, a: 1}
   moonColor: {r: 0.7, g: 0.8, b: 1, a: 1}
+  shadowDistance: 150
+  shadowBias: 0.005
+  shadowNormalBias: 0.4
   stars: {fileID: 0}
   starFadeSpeed: 1
   dayAmbient: 1
